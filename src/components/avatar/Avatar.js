@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 const Avatar = (props) => {
   return(
     <div>
-      <img src="/github-logo.svg" />
+      <img src="./github-logo.svg" />
     </div>
   )
 }
