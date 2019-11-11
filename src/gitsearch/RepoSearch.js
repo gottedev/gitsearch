@@ -1,22 +1,26 @@
 import React from 'react';
-import { setSelectedOption } from './actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import PropTypes from 'prop-types';
+import { setSelectedOption } from './actions';
 import GitSearch from './GitSearch';
 
-const RepoSearch = (props) => {
-  
-  props.setSelectedOption('Search Repos')
+const RepoSearch = ({ selectOption }) => {
+  selectOption('Search Repos');
 
-  return(
+  return (
     <>
       <GitSearch />
     </>
-  )
-}
+  );
+};
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  setSelectedOption
-}, dispatch)
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  selectOption: setSelectedOption,
+}, dispatch);
+
+RepoSearch.propTypes = {
+  selectOption: PropTypes.func.isRequired,
+};
 
 export default connect(null, mapDispatchToProps)(RepoSearch);

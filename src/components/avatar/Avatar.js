@@ -1,16 +1,11 @@
 import React from 'react';
-import { connect } from 'react-redux';
+import './Avatar.css';
 
-const Avatar = (props) => {
-  return(
-    <div>
-      <img src="./github-logo.svg" />
-    </div>
-  )
-}
+const Avatar = () => (
+  <div className="avatar">
+    <img alt="logo" src="./github-logo.svg" />
+  </div>
+);
 
-const mapStateToProps = (state) => ({
-  selectedOption:state.searchReducer.selectedOption
-})
 
-export default connect(mapStateToProps, null)(Avatar);
+export default Avatar;

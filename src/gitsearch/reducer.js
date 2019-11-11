@@ -1,50 +1,50 @@
 
 const initialState = {
   processingStatus: 'NOT_PROCESSED',
-  searchTerm:'',
-  selectedOption:'Search Repos',
-  data:[]
+  searchTerm: '',
+  selectedOption: 'Search Repos',
+  data: [],
 };
 
 export default (state = initialState, { payload, type }) => {
   switch (type) {
-    case 'setSearchTerm' :
+    case 'setSearchTerm':
       return {
         ...state,
-        searchTerm: payload
+        searchTerm: payload,
       };
 
-    case 'processing' :
+    case 'processing':
       return {
         ...state,
-        processingStatus: 'PROCESSING'
+        processingStatus: 'PROCESSING',
       };
-      
-    case 'processingError' :
-    return {
-      ...state,
-      processingStatus: 'processingError'
-    };
+
+    case 'processingError':
+      return {
+        ...state,
+        processingStatus: 'processingError',
+      };
 
     case 'SetRepos':
       return {
         ...state,
         data: payload,
-        processingStatus: 'PROCESSED'
+        processingStatus: 'PROCESSED',
       };
 
     case 'SearchOrganisations':
       return {
         ...state,
         data: payload,
-        processingStatus: 'PROCESSED'
+        processingStatus: 'PROCESSED',
       };
-      case 'SetSelectedOption':
+    case 'SetSelectedOption':
       return {
         ...state,
         selectedOption: payload,
         processingStatus: 'NOT_PROCESSED',
-        data:[]
+        data: [],
       };
     default:
       return state;

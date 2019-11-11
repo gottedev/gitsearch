@@ -1,26 +1,24 @@
 import React from 'react';
-import { setSelectedOption } from '../gitsearch/actions';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
+import { setSelectedOption } from '../gitsearch/actions';
 
-const Select = (props) => {
+const Select = ({ selectedOptions, options, className }) => {
   const handleChange = (e) => {
-    props.setSelectedOption(e.target.value);
-  }
-  const renderOptions = () => (props.options.map(value => 
-      <option value={value}>{value}</option>
-      ))
-  return(
+    selectedOptions(e.target.value);
+  };
+  const renderOptions = () => (options.map((value) => <option value={value}>{value}</option>));
+  return (
     <>
-      <select className={props.className} onChange={handleChange}>
+      <select className={className} onChange={handleChange}>
         {renderOptions()}
       </select>
     </>
-  )
-}
+  );
+};
 
-const mapDispatchToProps = dispatch => bindActionCreators({
-  setSelectedOption
-}, dispatch)
+const mapDispatchToProps = (dispatch) => bindActionCreators({
+  selectedOptions: setSelectedOption,
+}, dispatch);
 
 export default connect(null, mapDispatchToProps)(Select);

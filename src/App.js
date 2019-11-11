@@ -1,5 +1,7 @@
 import React from 'react';
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
+import {
+  createStore, applyMiddleware, compose, combineReducers,
+} from 'redux';
 import { Provider } from 'react-redux';
 import thunk from 'redux-thunk';
 import searchReducer from './gitsearch/reducer';
@@ -12,18 +14,18 @@ const initialState = {};
 const middleware = [thunk];
 
 const reducers = {
-  searchReducer
-}
+  searchReducer,
+};
 
 const store = createStore(
   combineReducers(reducers),
   initialState,
-  composeEnhancers(applyMiddleware(...middleware))
-)
+  composeEnhancers(applyMiddleware(...middleware)),
+);
 
 function App() {
   return (
-    <Provider store = {store}>
+    <Provider store={store}>
       <AppRouter />
     </Provider>
   );

@@ -9,5 +9,5 @@ export {
   Nav,
   Button,
   SearchResultsContainer,
-  Avatar
+  Avatar,
 };
