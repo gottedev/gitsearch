@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  BrowserRouter as Router, Switch, Route
+  HashRouter as Router, Switch, Route
 } from 'react-router-dom';
 import OrganisationSearch from './gitsearch/OrgnisationSearch'
 import RepoSearch from './gitsearch/RepoSearch'
