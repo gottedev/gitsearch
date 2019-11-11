@@ -1,0 +1,28 @@
+.ResultContainer {
+  height: 100%;
+  /* overflow: auto; */
+  max-width: 100%;
+}
+
+.Result{
+  max-width:100%;
+  height:100px;
+  background: rgb(215, 240, 182);
+  margin:10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} 
+
+.ResultTitle{
+  font-size: 18px;
+  font-weight: bold;
+  padding-left:10px;
+}
+
+.ResultDescription{
+  font-size: 14px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  padding-left:10px;
+}

@@ -1,0 +1,27 @@
+.Navbar{
+  background: rgb(99, 159, 170);
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  text-decoration: none;
+  list-style-type: none;
+  height:10%;
+  margin-bottom: 30px;
+}
+
+.Navbar a{
+  text-decoration: none;
+  list-style-type: none;
+  margin-left: 10px;
+  color:white;
+  outline: none;
+}
+
+.Navbar a:hover{
+  text-decoration: underline;
+  list-style-type: none;
+  margin-left: 10px;
+  color:red;
+  outline: none;
+}

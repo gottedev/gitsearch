@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import App from './App';
+import { render } from '@testing-library/react'
+import GitSearch from './gitsearch/GitSearch';
 
-it('renders without crashing', () => {
-  const div = document.createElement('div');
-  ReactDOM.render(<App />, div);
-  ReactDOM.unmountComponentAtNode(div);
-});
+
+test('can render with redux with defaults', () => { render(<GitSearch />)
+})
+
+
