@@ -5,6 +5,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "eslint": "^6.6.0",
+    "gh-pages": "^2.1.1",
     "react": "^16.11.0",
     "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.11.0",
@@ -19,6 +20,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -28,6 +31,7 @@
       "^vendor(.*)$": "<rootDir>/vendor/$1"
     }
   },
+  "homepage": "https://gottedev.github.io/gitsearch",
   "eslintConfig": {
     "extends": "react-app"
   },
