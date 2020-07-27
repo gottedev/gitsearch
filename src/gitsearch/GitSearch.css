@@ -1,0 +1,79 @@
+* {
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+
+#root{
+  height: 100%;
+  background: white;
+}
+
+.GitSearch{
+  min-width:100%;
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  background:rgba(200, 201, 198, 0.61);
+  align-items: center;
+}
+
+.SearchContainer{
+  display: flex;
+  width: 50%;
+  justify-content: center;
+}
+
+.CustomizableSelect{
+  height: 40px;
+  margin:2px;
+  width:20%;
+}
+
+.CustomizableSearch{
+  height: 40px;
+  margin:2px;
+  width:60%;
+  padding-left:10px;
+}
+
+.CustomizableButton{
+  background-color:rgb(99, 159, 170);
+  border:none;
+  margin:2px;
+  height: 40px;
+  min-width: 10%;
+  width:20%;
+  flex-shrink: none;
+  color:white;
+}
+
+.AvatarDescription{
+  font-weight: bold;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+.ResultsContainer{
+  margin-top: 20px;
+  max-width: 50%;
+}
+
+
+
+@media screen and (max-width: 600px) {
+  .SearchContainer {
+    display: flex;
+    align-items: center;
+    flex-shrink: wrap;
+    width: 100%;
+  }
+  .ResultsContainer{
+    margin-top: 20px;
+    max-width: 100%;
+  }
+}
