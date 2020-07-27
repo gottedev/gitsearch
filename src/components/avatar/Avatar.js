@@ -1,11 +1,11 @@
-import React from 'react';
-import './Avatar.css';
+import React from "react";
+import Logo from "../../Logo";
+import "./Avatar.css";
 
 const Avatar = () => (
   <div className="avatar">
-    <img alt="logo" src="./github-logo.svg" />
+    <Logo />
   </div>
 );
-
 
 export default Avatar;
